@@ -1,0 +1,107 @@
+/*
+// Reglas para CSS
+1. Posicionamiento
+2. Modelo de caja (box model)
+3. Tipografia
+4. Visuales 'efecto visuales como el hover'
+5. Otras / Miselaneos
+
+// Breakpoints
+xs: 360px;
+s: 440px;
+m: 768;
+l: 1280px;
+xl: 1440px;
+*/
+
+/* varialble para colores */
+:root {
+    --xs: 360px;
+    --s: 440px;
+    --m: 768px;
+    --l: 1280px;
+    --xl: 1440px;
+
+    --fondo-principal: #1E1E1E;
+    --fondo-secundario: #2A2A2A; /*targetas, modales, elementos scuendarios*/
+    --acento: #F48FB1; /*botones, iconos, interactividad*/
+    --text-color: #E0E0E0;
+    --detalles: #C7748E;
+  
+    --transform-menu-mobile: translate(-100%);
+    --nav-icon-menu: url("./img/icon/icon-menu-open-black.png");
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+  
+  p {
+    text-wrap: pretty;
+    color: var(--text-color);
+  }
+  ul {
+    color: var(--text-color);
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-wrap: balance;
+    color: var(--text-color);
+  }
+  
+  img,
+  video,
+  svg {
+    height: auto;
+    max-width: 100%;
+  }
+  
+  html {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 62.5%; /* 1rem = 10px*/
+    font-weight: normal;
+    font-style: normal;
+  
+    scrollbar-color: #f0a8d0 #ffebd4;
+    scrollbar-width: thin;
+  }
+  
+  body {
+    min-height: 100dvh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+  
+    font-size: 1.6rem; /* = 16px por defexto en html*/
+    background-color: var(--fondo-principal);
+  
+    /* overflow: hidden; */
+  }
+  
+  .container {
+    width: 100%;
+    min-width: 360px;
+    max-width: 1024px;
+    margin: 0 auto;
+    /* padding: 0 1.6rem; */
+  }
