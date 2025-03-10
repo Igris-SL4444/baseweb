@@ -100,6 +100,7 @@ select {
 
 p {
   text-wrap: pretty;
+  font-size: clamp(1.5em, 1.6rem, 1.8rem);/* tama;o de texto responsivo */
   /* color: var(--text-color); */
 }
 ul {
@@ -123,6 +124,12 @@ svg {
   max-width: 100%;
   aspect-ratio: 16 / 9;
 }
+
+/* el vertical-align, quita el borde inferior que se puede generar en las images, esto puede solucionar el echo de tener que poder un height del 100% */
+/* img {
+  vertical-align: bottom;
+  display: block;
+} */
 
 
 
