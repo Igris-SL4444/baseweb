@@ -35,9 +35,6 @@ xl: 1280px; // extra largo, extra large
   --acento: #f48fb1; /*botones, iconos, interactividad*/
   --text-color: #e0e0e0;
   --detalles: #c7748e;
-
-  --transform-menu-mobile: translate(-100%);
-  --nav-icon-menu: url("./img/icon/icon-menu-open-black.png");
 }
 
 @font-face {
@@ -100,11 +97,6 @@ select {
 
 p {
   text-wrap: pretty;
-  font-size: clamp(1.5em, 1.6rem, 1.8rem);/* tama;o de texto responsivo */
-  /* color: var(--text-color); */
-}
-ul {
-  /* color: var(--text-color); */
 }
 
 h1,
@@ -114,7 +106,6 @@ h4,
 h5,
 h6 {
   text-wrap: balance;
-  /* color: var(--text-color); */
 }
 
 img,
@@ -126,10 +117,10 @@ svg {
 }
 
 /* el vertical-align, quita el borde inferior que se puede generar en las images, esto puede solucionar el echo de tener que poder un height del 100% */
-/* img {
-  vertical-align: bottom;
+img {
+  /* vertical-align: bottom; */
   display: block;
-} */
+}
 
 
 
@@ -137,7 +128,7 @@ html {
   font-family: "Lato", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 62.5%; /* 100% = 16px, (10 * 100) / 16 = 62.5% =>  1rem = 10px*/
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
 
   /*la barra de scroll por lo general no se estila, solo se recomienda estilarla cuando son companentes mas peque;os*/
@@ -149,9 +140,8 @@ body {
   min-height: 100dvh;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  font-size: 1.6rem;
-
-  /* background-color: var(--fondo-principal); */
+  font-size: clamp(12px, 4vw + 1rem, 16px);
+  /* tama;o de texto responsivo */
 }
 
 /* esto detecta el color de sistema 'operativo!!!' */
@@ -168,4 +158,14 @@ body {
   max-width: 1024px;
   /* width: min(360px, 1024px); */
   margin: 0 auto;
+}
+
+.button {
+  vertical-align: middle;
+  text-decoration: none;
+  color: white;
+  font-size: 1.6rem;
+  padding: 0.4em 1.2em;
+  border-radius: .4em;
+  background-color: #2a2a2a;
 }
