@@ -97,6 +97,7 @@ select {
 
 p {
   text-wrap: pretty;
+  hyphenate-limit-chars: 7;
 }
 
 h1,
